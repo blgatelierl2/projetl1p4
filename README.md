@@ -7,18 +7,17 @@ des exemples d'utilisation de l'interface.
 **Attention.** Inutile de lire/modifier les classes `IHM` et `Plateau` !
 
 ==========
-Méthodes utiles fournies par la classe IHM :
+**Méthodes utiles fournies par la classe IHM :**
 
 * Mettre à jour le plateau
 ```java
 void IHM.majPlateau(int t[7][7])
 ```
 
-* Attendre un ordre (type enum Ordre) de l'utilisateur
+* Attendre un ordre (type `enum Ordre`) de l'utilisateur
 ```java
 Ordre IHM.ordreUtilisateur()
-
-// type enum Ordre
+// type enum Ordre :
 enum Ordre {COLONNE0,COLONNE1,COLONNE2,COLONNE3,COLONNE4,COLONNE5,COLONNE6,ROTATIONG,ROTATIOND,APROTAG,APROTAD,RETOUR,INCONNU;}
 // INCONNU ne devrait jamais sortir (sauf modif. du code ou bug)
 ```
