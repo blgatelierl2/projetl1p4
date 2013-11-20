@@ -38,9 +38,10 @@ public class IHM extends JFrame implements ActionListener {
 
     public IHM() {
 	// On fabrique le contenu
-	panel.setPreferredSize(new Dimension(860, 870));
+	int dimp = plateau.getDim();
+	panel.setPreferredSize(new Dimension(dimp+2*60, dimp+150));
 	JPanel boutons = new JPanel(new GridLayout(1,7,25,10));
-	boutons.setPreferredSize(new Dimension(680,30));
+	boutons.setPreferredSize(new Dimension(dimp,26));
 	boutons.add(b0);
 	b0.addActionListener(this);
 	boutons.add(b1);
@@ -66,11 +67,11 @@ public class IHM extends JFrame implements ActionListener {
 	brd.addActionListener(this);
 	panel.add(plateaurota,BorderLayout.SOUTH);
 	JPanel paneltexte = new JPanel();
-	paneltexte.setPreferredSize(new Dimension(700,70));
+	paneltexte.setPreferredSize(new Dimension(dimp,55));
 	paneltexte.add(zonetexte);
 	panel.add(paneltexte,BorderLayout.SOUTH);
 	JPanel panelap = new JPanel();
-	panelap.setPreferredSize(new Dimension(700,30));
+	//panelap.setPreferredSize(new Dimension(dimp,30));
 	panelap.add(bapg);
 	bapg.addActionListener(this);
 	panelap.add(bret);

@@ -7,11 +7,16 @@ import java.awt.Color;
 
 public class Plateau extends JPanel {
     private int t[][] = new int[7][7];
+    private int dim = 7*85; // Modifier ICI uniquement la dimension du plateau
 
     public Plateau() {
 	setBackground(Color.BLUE);
-	setPreferredSize(new Dimension(700, 700));
+	setPreferredSize(new Dimension(dim, dim));
     } 
+
+    public int getDim() {
+	return dim;
+    }
 
     public void setTableau(int tableau[][]) {
 	for (int i=0; i<7; ++i)
@@ -23,12 +28,15 @@ public class Plateau extends JPanel {
     public void dessiner(Graphics g) {
 	Graphics2D g2 = (Graphics2D)g;
 	g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+	int s = dim/7;
+	int D = 3*s/4;
+	int d = (s-D)/2;
 	for (int i=0; i<7; ++i) {
 	    for (int j=0; j<7; ++j) {
 		if (t[i][j]==0) g2.setColor(Color.WHITE);
 		else if (t[i][j]==1) g2.setColor(Color.RED);
 		else g2.setColor(Color.YELLOW);
-		g2.fillOval(100*i+12,100*j+12,76,76);
+		g2.fillOval(s*i+d,s*j+d,D,D);
 	    }
 	}
     }

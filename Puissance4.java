@@ -7,7 +7,7 @@ class Puissance4 {
 	t[0][0] = 1;
 	t[1][0] = 2;
 	ihm.majPlateau(t); // à rappeler pour mettre à jour (le tableau est copié en interne)
-	ihm.majTexte("<html>ceci est un petit texte<br>ligne 2<br>ligne 3<br>ligne 4</html>");
+	ihm.majTexte("<html>ceci est un petit <u>texte</u><br><b>ligne 2</b><br><i>ligne 3</i></html>");
 
 	/* Activer/désactiver des boutons */
 	//ihm.activerColonnes(true);
@@ -62,6 +62,7 @@ class Puissance4 {
 		break;
 	    default:
 		ihm.boiteMessage("Hum, ordre inconnu ?!");
+		// Ne devrait pas se produire !
 	    }
 	}
     }
