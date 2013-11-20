@@ -32,6 +32,7 @@ void IHM.majTexte(String m)
 ```java
 void IHM.boiteMessage(String m)
 boolean IHM.boiteQuestion(String m)
+String IHM.boiteChoixMultiples(String m, String choix[])
 ```
 
 * Activer/désactiver des boutons

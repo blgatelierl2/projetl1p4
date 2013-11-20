@@ -18,7 +18,9 @@ class Puissance4 {
 	/* Boîtes de dialogue */
 	//ihm.boiteMessage("<html>ligne 1<br>ligne 2</html>");
 	//ihm.boiteQuestion("ok?"); // return true/false
-
+	String choix[] = {"Joueur vs Joueur","Joueur vs IA (Joueur commence)","IA vs Joueur (IA commence)"};
+	ihm.boiteMessage(ihm.boiteChoixMultiples("Choisir le type de partie :",choix));
+	
 	/* Ordres de l'utilisateur */
 	while(true) { // on prend les ordres en boucle
 	    // On attend un nouvel ordre

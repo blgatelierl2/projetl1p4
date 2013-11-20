@@ -124,6 +124,11 @@ public class IHM extends JFrame implements ActionListener {
     public boolean boiteQuestion(String q) {
 	return (JOptionPane.showConfirmDialog(this, q, "Puissance 4", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION);
     }
+
+    public String boiteChoixMultiples(String m, String choix[]) {
+	//String choix[] = {"Joueur vs Joueur","Joueur vs IA (Joueur commence)","IA vs Joueur (IA commence)"};
+	return (String)JOptionPane.showInputDialog(this,m,"Puissance 4",JOptionPane.QUESTION_MESSAGE,null,choix,choix[0]);
+    }
     
     public void activerColonnes(boolean b) {
 	b0.setEnabled(b);
