@@ -42,7 +42,7 @@ Ordre IHM.ordreUtilisateur()
 où le type `enum Ordre` est :
 ```java
 enum Ordre {COLONNE0,COLONNE1,COLONNE2,COLONNE3,COLONNE4,COLONNE5,COLONNE6,
-ROTATIONG,ROTATIOND,APROTAG,APROTAD,RETOUR,INCONNU;}
+     	    ROTATIONG,ROTATIOND,APROTAG,APROTAD,RETOUR,INCONNU;}
 ```
 
 * Afficher une boîte de dialogue :
