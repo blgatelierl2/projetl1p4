@@ -4,14 +4,16 @@ class Puissance4 {
 
 	/* Exemples de manipulation de l'IHM */
 	int t[][] = new int[7][7];
-	t[0][0] = 1;
-	t[1][0] = 2;
+	for (int i=0; i<7; ++i) {
+	    t[i][i] = 1; // rouge
+	    t[i][6-i] = 2; // jaune
+	}
 	ihm.majPlateau(t); // à rappeler pour mettre à jour (le tableau est copié en interne)
 	ihm.majTexte("<html>ceci est un petit <u>texte</u><br><b>ligne 2</b><br><i>ligne 3</i></html>");
 
 	/* Activer/désactiver des boutons */
-	//ihm.activerColonnes(true);
-	//ihm.activerRotation(true);
+	//ihm.activerColonnes(false);
+	//ihm.activerRotation(false);
 	//ihm.activerApercu(false);
 	//ihm.activerRetour(false);
 	
@@ -19,12 +21,13 @@ class Puissance4 {
 	//ihm.boiteMessage("<html>ligne 1<br>ligne 2</html>");
 	//ihm.boiteQuestion("ok?"); // return true/false
 	String choix[] = {"Joueur vs Joueur","Joueur vs IA (Joueur commence)","IA vs Joueur (IA commence)"};
-	ihm.boiteMessage(ihm.boiteChoixMultiples("Choisir le type de partie :",choix));
+	ihm.boiteMessage("-> "+ihm.boiteChoixMultiples("Choisir le type de partie :",choix));
 	
 	/* Ordres de l'utilisateur */
-	while(true) { // on prend les ordres en boucle
+	while(true) { // ici, pour l'exemple,  on prend les ordres en boucle
 	    // On attend un nouvel ordre
 	    IHM.Ordre ordre = ihm.ordreUtilisateur();
+	    // On traite l'ordre
 	    switch (ordre) {
 	    case COLONNE0:
 		ihm.boiteMessage("Colonne 0");
@@ -54,17 +57,20 @@ class Puissance4 {
 		ihm.boiteMessage("Rotation droite");
 		break;
 	    case APROTAG:
-		ihm.boiteQuestion("Visualiser rotation gauche ?");
+		if (ihm.boiteQuestion("Visualiser rotation gauche ?")) ihm.boiteMessage("-> Oui");
+		else ihm.boiteMessage("-> Non");
 		break;
 	    case APROTAD:
-		ihm.boiteQuestion("Visualiser rotation droite ?");
+		if (ihm.boiteQuestion("Visualiser rotation droite ?")) ihm.boiteMessage("-> Oui");
+		else ihm.boiteMessage("-> Non");
 		break;
 	    case RETOUR:
-		ihm.boiteQuestion("Retour au jeu ?");
+		if (ihm.boiteQuestion("Retour au jeu ?")) ihm.boiteMessage("-> Oui");
+		else ihm.boiteMessage("-> Non");
 		break;
 	    default:
 		ihm.boiteMessage("Hum, ordre inconnu ?!");
-		// Ne devrait pas se produire !
+		// Ne devrait pas se produire, sauf si vous modifiez le code de la classe IHM !
 	    }
 	}
     }

@@ -71,7 +71,6 @@ public class IHM extends JFrame implements ActionListener {
 	paneltexte.add(zonetexte);
 	panel.add(paneltexte,BorderLayout.SOUTH);
 	JPanel panelap = new JPanel();
-	//panelap.setPreferredSize(new Dimension(dimp,30));
 	panelap.add(bapg);
 	bapg.addActionListener(this);
 	panelap.add(bret);
@@ -121,13 +120,24 @@ public class IHM extends JFrame implements ActionListener {
 	JOptionPane.showMessageDialog(this, m, "Puissance 4", JOptionPane.INFORMATION_MESSAGE);
     }
 
+    public void boiteMessageAttention(String m) {
+	JOptionPane.showMessageDialog(this, m, "Puissance 4", JOptionPane.WARNING_MESSAGE);
+    }
+
+    public void boiteMessageErreur(String m) {
+	JOptionPane.showMessageDialog(this, m, "Puissance 4", JOptionPane.ERROR_MESSAGE);
+    }
+
     public boolean boiteQuestion(String q) {
 	return (JOptionPane.showConfirmDialog(this, q, "Puissance 4", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION);
     }
 
     public String boiteChoixMultiples(String m, String choix[]) {
-	//String choix[] = {"Joueur vs Joueur","Joueur vs IA (Joueur commence)","IA vs Joueur (IA commence)"};
 	return (String)JOptionPane.showInputDialog(this,m,"Puissance 4",JOptionPane.QUESTION_MESSAGE,null,choix,choix[0]);
+    }
+    
+    public String boiteQuestionTexte(String q) {
+	return (String)JOptionPane.showInputDialog(this,q,"Puissance 4",JOptionPane.QUESTION_MESSAGE);
     }
     
     public void activerColonnes(boolean b) {

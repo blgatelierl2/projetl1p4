@@ -14,6 +14,11 @@ des exemples d'utilisation de l'interface.
 void IHM.majPlateau(int t[7][7])
 ```
 
+* Mettre à jour la zone de texte de l'IHM
+```java
+void IHM.majTexte(String m)
+```
+
 * Attendre un ordre (type `enum Ordre`) de l'utilisateur
 ```java
 Ordre IHM.ordreUtilisateur()
@@ -22,17 +27,14 @@ enum Ordre {COLONNE0,COLONNE1,COLONNE2,COLONNE3,COLONNE4,COLONNE5,COLONNE6,ROTAT
 // INCONNU ne devrait jamais sortir (sauf modif. du code ou bug)
 ```
 
-
-* Mettre à jour la zone de texte de l'IHM
-```java
-void IHM.majTexte(String m)
-```
-
 * Afficher une boîte de dialogue
 ```java
 void IHM.boiteMessage(String m)
+void IHM.boiteMessageAttention(String m)
+void IHM.boiteMessageErreur(String m)
 boolean IHM.boiteQuestion(String m)
 String IHM.boiteChoixMultiples(String m, String choix[])
+String IHM.boiteQuestionTexte(String q)
 ```
 
 * Activer/désactiver des boutons
