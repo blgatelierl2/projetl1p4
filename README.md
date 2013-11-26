@@ -1,12 +1,22 @@
 Documentation de l'IHM
 ==========
 
-Le moteur du jeu est à coder dans `Puissance4.java` qui contient
-des exemples d'utilisation de l'interface.
+Le moteur du jeu est à coder dans `Puissance4.java` qui contient pour l'instant
+des exemples d'utilisation de l'interface. Pour compiler :
+
+```
+$ javac Puissance4.java
+$ java Puissance4
+```
 
 **Attention.** Inutile de lire/modifier les classes `IHM` et `Plateau` !
 
-Lancer l'IHM
+Télécharger le code
+----------
+
+Cliquer sur le bouton **Download ZIP** à droite.
+
+Utiliser l'IHM dans votre code
 ----------
 
 Créer un objet `ihm` de classe `IHM` :
@@ -15,11 +25,13 @@ Créer un objet `ihm` de classe `IHM` :
 IHM ihm = new IHM();
 ```
 
-Puis utiliser cet objet pour invoquer les méthodes utiles fournies par la classe `IHM`, par exemple :
+Cela fabriquera automatiquement la fenêtre de jeu. Puis utiliser cet objet pour invoquer les méthodes utiles fournies par la classe `IHM`, par exemple :
 
 ```java
 ihm.boiteMessage("Hello world!");
 ```
+
+L'utilisation de l'IHM est illustrée dans le fichier `Puissance4.java` fourni qui contient de nombreux exemples utiles.
 
 Méthodes utiles fournies par la classe `IHM`
 ----------
@@ -64,8 +76,3 @@ void IHM.activerRotation(boolean b)
 void IHM.activerApercu(boolean b)
 void IHM.activerRetour(boolean b)
 ```
-
-Exemples
-----------
-
-Le fichier `Puissance4.java` contient de nombreux exemples utiles.
