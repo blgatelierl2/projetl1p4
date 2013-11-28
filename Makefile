@@ -1,7 +1,11 @@
 all: Puissance4.class
 
-Puissance4.class: Puissance4.java
+%.class: %.java
 	javac $<
+
+Puissance4.class: Puissance4.java IHM.class
+
+IHM.class: Plateau.class
 
 run: Puissance4.class
 	java Puissance4
