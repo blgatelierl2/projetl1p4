@@ -1,6 +1,6 @@
 class Puissance4 {
     public static void main(String[] arg) { 
-	IHM ihm = new IHM();
+	IHM ihm = new IHM(7*80);
 
 	/* Exemples de manipulation de l'IHM */
 	int t[][] = new int[7][7];

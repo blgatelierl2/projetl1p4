@@ -19,13 +19,13 @@ Cliquer sur le bouton **Download ZIP** à droite.
 Utiliser l'IHM dans votre code
 ----------
 
-Créer un objet `ihm` de classe `IHM` :
+Créer un objet `ihm` de classe `IHM` en lui spécifiant la taille (en pixels) du plateau de jeu :
 
 ```java
-IHM ihm = new IHM();
+IHM ihm = new IHM(560);
 ```
 
-Cela fabriquera automatiquement la fenêtre de jeu. Puis utiliser cet objet pour invoquer les méthodes utiles fournies par la classe `IHM`, par exemple :
+Cela fabriquera automatiquement une fenêtre de jeu dont la taille s'adaptera à la dimension choisie pour le plateau. Puis utiliser cet objet pour invoquer les méthodes utiles fournies par la classe `IHM`, par exemple :
 
 ```java
 ihm.boiteMessage("Hello world!");

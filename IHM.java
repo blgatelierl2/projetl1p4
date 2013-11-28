@@ -15,7 +15,7 @@ import javax.swing.ImageIcon;
 
 public class IHM extends JFrame implements ActionListener {
     private JPanel panel = new JPanel();
-    private Plateau plateau = new Plateau();
+    private Plateau plateau;
     private JButton b0 = new JButton(new ImageIcon("img/flcol.png"));
     private JButton b1 = new JButton(new ImageIcon("img/flcol.png"));
     private JButton b2 = new JButton(new ImageIcon("img/flcol.png"));
@@ -36,9 +36,9 @@ public class IHM extends JFrame implements ActionListener {
     }
     private Ordre ordre;
 
-    public IHM() {
+    public IHM(int dimp) {
 	// On fabrique le contenu
-	int dimp = plateau.getDim();
+	plateau = new Plateau(dimp);
 	panel.setPreferredSize(new Dimension(dimp+2*60, dimp+150));
 	JPanel boutons = new JPanel(new GridLayout(1,7,25,10));
 	boutons.setPreferredSize(new Dimension(dimp,26));

@@ -7,11 +7,12 @@ import java.awt.Color;
 
 public class Plateau extends JPanel {
     private int t[][] = new int[7][7];
-    private int dim = 7*80; // Modifier ICI uniquement la dimension du plateau
+    private int dim;
     private Color coul_bleu = new Color((float)0.2,(float)0.2,(float)1.);
     private Color coul_rouge = new Color((float)0.8,(float)0.,(float)0.);
 
-    public Plateau() {
+    public Plateau(int dimension) {
+	dim = dimension;
 	setBackground(coul_bleu);
 	setPreferredSize(new Dimension(dim, dim));
     } 
