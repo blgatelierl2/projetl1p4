@@ -40,7 +40,7 @@ Méthodes utiles fournies par la classe `IHM`
 ```java
 void IHM.majPlateau(int t[7][7])
 ```
-Les valeurs **1** et **2** sont interprétées comme des jetons respectivement **rouge** et **jaune**, toute autre valeur est interprétée comme un **blanc**.
+La valeur **0** est interprétée comme un **blanc**. Les valeurs **1** et **2** sont interprétées comme des jetons respectivement **rouge** et **jaune**. Toute autre valeur est interprétée comme un **2**.
 
 * Mettre à jour la zone de texte de l'IHM :
 ```java
