@@ -84,6 +84,8 @@ public class IHM extends JFrame implements ActionListener {
 	pack();
 	setResizable(false);
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	//setLocationRelativeTo(null); // centrer la fenêtre sur l'écran
+	setLocationByPlatform(true); // laisser le Window Manager placer la fenêtre
 	setVisible(true);
     }
 
